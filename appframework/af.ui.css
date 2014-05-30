@@ -545,7 +545,7 @@ body {
 @media handheld, only screen and (min-width: 768px) {
 	#afui > #navbar.hasMenu, #afui > #header.hasMenu, #afui > #content.hasMenu  {
 		position:absolute;
-        background-color: #fff !important;
+        
 		left:256px;
 		-webkit-transition: transform 0ms;
 	    -webkit-transform:translate3d(0,0,0) !important;
