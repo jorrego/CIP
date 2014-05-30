@@ -1,0 +1,17 @@
+body {
+}
+
+#page1 button {
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    width: 200px;
+    padding: 5px;
+    background-color: #f00;
+    
+}
+
+#page1 button a {
+    text-decoration: none;
+    color: #fff;
+}

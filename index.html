@@ -11,7 +11,8 @@
     <script src="phonegap.js"></script>
         
     <script src="childbrowser.js"></script>
-    
+
+    <link rel="stylesheet" type="text/css" href="css.css" />
     <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
     <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
     <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
@@ -63,14 +64,17 @@
                 <h1>CIP Móvil</h1>
             </header>
             <br />
-            <h2 style="text-align: center;color: #000">Bienvenido</h2>
-            <p style="text-align: center;"><img src="img/logo.png" alt="" style="width: 50%;" /></p>
+            <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
+            <p style="text-align: center;">
+                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon heart">CIP Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat">CIP Noticias</a></button><br /><button type="button"><a href="#page4" class="icon user">Eventos Recomendados</a></button>
+            </p>
+
         </div>
         
         <div class="panel" title="Favorites" id="page2" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>CIP Eventos</h1>
+                <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> CIP Eventos</h1>
             </header>
             <p>Acá irán los eventos.</p>
         </div>
@@ -78,7 +82,7 @@
         <div class="panel" title="Messages" id="page3" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>CIP Noticias</h1>
+                <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> CIP Noticias</h1>
             </header>
             <p>Acá irán las noticias.</p>
         </div>
@@ -86,7 +90,7 @@
         <div class="panel" title="Profile" id="page4" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>Eventos Recomendados</h1>
+                <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> Eventos Recomendados</h1>
             </header>
             <p>Acá irán los eventos recomendados.</p>
         </div>

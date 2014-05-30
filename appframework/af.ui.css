@@ -281,7 +281,7 @@ body {
 	font-weight:bold;
 	font-size:1em;
 	line-height:1em;
-	border-color:#101012;
+	/*border-color:#101012;*/
 	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
 
@@ -773,7 +773,7 @@ body {
 }
 
 #afui > #menu.tabletMenu {
-	background: #E31E24;
+	background-color: #13294a;
     color:white;
     /*background:#00AEEF;*/
     border-right:1px solid #006BA4;
