@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.cip.movil"
+        versionCode="1" 
+        version   = "1.0.b">
+
+    <!-- versionCode is optional and Android only -->
+
+
+    <name>CIP Móvil</name>
+
+    <description>
+        Aplicación movil del Colegio de Ingenieros del Perú - Consejo Nacional 
+    </description>
+
+    <author href="https://www.cip.org.pe" email="webmaster@cip.org.pe">
+        Ärea de Informática
+    </author>
+    
+    <icon src="img/logo.png" />
+    
+    <preference name="phonegap-version" value="3.3.0" />
+    
+    <plugin name="ChildBrowser" value="com.phonegap.plugins.childBrowser.ChildBrowser"/>
+    
+</widget>
