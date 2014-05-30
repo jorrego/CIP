@@ -3,7 +3,11 @@ body {
 
 
 #header.hasMenu {
-    
+    background: #b22222 !important;
+}
+
+#menu.tabletMenu {
+    background-color: #13294a !important;
 }
 
 #page1 button {
