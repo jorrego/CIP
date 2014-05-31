@@ -13,6 +13,11 @@ body {
 #afui #content {
     background-color: #fff;  
 }
+
+.panel {
+    background-color: #fff;
+}
+
 #page1 button {
     margin-top: 10px;
     border: 0;
