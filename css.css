@@ -14,8 +14,8 @@ body {
     background-color: #fff;  
 }
 
-.panel {
-    background-color: #fff;
+#afui .panel {
+    background-color: #fff !important;
 }
 
 #page1 button {
