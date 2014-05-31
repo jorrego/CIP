@@ -32,3 +32,20 @@ body {
     text-decoration: none;
     color: #fff;
 }
+
+p.recomendado img {
+    margin: 5px;
+    
+}
+
+a {
+color: #bc0202;
+}
+
+div.catItemView.groupPrimary {
+/*float: left;*/
+}
+
+div.catItemHeader,div.catItemBody {
+    /*float: right*/
+}
