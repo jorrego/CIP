@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
     <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
     <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://dilib.net/old/js/jquery-1.9.1.min.js"></script>
     <!--AppFramework plugin for sliding side menu-->
     <script type="text/javascript" charset="utf-8" src="appframework/plugins/af.slidemenu.js"></script>
 
@@ -40,6 +41,31 @@
             $.ui.launch();
         });
     </script>
+
+
+        <script>
+            
+            function realizaProceso(){
+                jQuery.noConflict();
+                    jQuery.ajax({
+
+                            url:   'http://www.cip.org.pe/App/app/recomendados',
+
+                            beforeSend: function () {
+                                    jQuery("#recomendado").html("Procesando, espere por favor...");
+                            },
+                            success:  function (response) {
+                                    jQuery("#recomendado").html(response);
+                            }
+                    });
+            }
+        </script>
+
+
+
+
+
+
 </head>
 <body> 
 <div id="afui">
@@ -50,7 +76,7 @@
             <!--<li><a href="#page1" class="icon heart">CIP Móvil</a></li>-->
             <li><a href="#page2" class="icon home">CIP Eventos</a></li>
             <li><a href="#page3" class="icon chat">CIP Noticias</a></li>
-            <li><a href="#page4" class="icon user">Eventos Recomendados</a></li>
+            <li><a href="#page4" class="icon user" onclick="realizaProceso();return false;">Eventos Recomendados</a></li>
             <li><a href="#"><img src="img/fb.jpg" alt="Logo" style="width: 35px;" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 35px;" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 35px;" /></a></li>
@@ -814,7 +840,7 @@
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> Eventos Recomendados</h1>
             </header>
-            <p class="recomendado" style="text-align: center">
+            <p class="recomendado" id="recomendado" style="text-align: center">
                 <img src="http://www.cip.org.pe/images/eventos_recomendados/2014/20140828-CONGRESO_INGENIERIA.jpg" alt="Congreso Ingeniería" title="">
                 <img src="http://www.cip.org.pe/images/eventos_recomendados/2014/20141103-INGEPET.jpg" alt="INGEPET" title="">
                 <img src="http://www.cip.org.pe/images/eventos_recomendados/2014/20140620-INVENCIONES.jpg" alt="Invenciones" title="">
