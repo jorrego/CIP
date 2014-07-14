@@ -51,7 +51,7 @@
                             url:   'http://www.cip.org.pe/App/app/eventos',
 
                             beforeSend: function () {
-                                    ev("#eventos").html("Procesando, espere por favor...");
+                                    ev("#eventos").html('<img src="img/cargando.gif" alt="Cargando" />');
                             },
                             success:  function (response) {
                                     ev("#eventos").html(response);
@@ -67,7 +67,7 @@
                             url:   'http://www.cip.org.pe/App/app/recomendados',
 
                             beforeSend: function () {
-                                    re("#recomendado").html("img/cargando.gif");
+                                    re("#recomendado").html('<img src="img/cargando.gif" alt="Cargando" />');
                             },
                             success:  function (response) {
                                     re("#recomendado").html(response);
@@ -82,7 +82,7 @@
                             url:   'http://www.cip.org.pe/App/app/noticias',
 
                             beforeSend: function () {
-                                    no("#noticias").html("Procesando, espere por favor...");
+                                    no("#noticias").html('<img src="img/cargando.gif" alt="Cargando" />');
                             },
                             success:  function (response) {
                                     no("#noticias").html(response);
