@@ -67,7 +67,7 @@
                             url:   'http://www.cip.org.pe/App/app/recomendados',
 
                             beforeSend: function () {
-                                    re("#recomendado").html("Procesando, espere por favor...");
+                                    re("#recomendado").html("img/cargando.gif");
                             },
                             success:  function (response) {
                                     re("#recomendado").html(response);
