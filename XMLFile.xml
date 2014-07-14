@@ -19,7 +19,7 @@
     </author>
     
     <icon src="img/logo.png" />
-    
+    <plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
     <preference name="phonegap-version" value="3.3.0" />
     <preference name="Orientation" value="portrait" />
     <plugin name="ChildBrowser" value="com.phonegap.plugins.childBrowser.ChildBrowser"/>

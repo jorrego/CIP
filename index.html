@@ -93,7 +93,23 @@
             
         </script>
 
+    <script type="text/javascript" charset="utf-8">
 
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+
+    </script>
 
 
 
@@ -128,7 +144,7 @@
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
             <p style="text-align: center;">
                 <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="eventos();return false;">CIP Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP Noticias</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
-                <img src="img/fb.jpg" alt="Logo" style="width: 50px;" />
+                <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="onDeviceReady()" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" />
 
