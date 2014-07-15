@@ -73,7 +73,7 @@
                         type:  'post',
 
                         beforeSend: function () {
-                            evit("#eventositem").html('<br /><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" />');
+                            evit("#eventositem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /></p>');
                         },
                         success:  function (response) {
                             evit("#eventositem").html(response);
@@ -239,11 +239,11 @@
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> Eventos</h1>
             </header>
-            <p class="eventositem" id="eventositem">
+            <div class="eventositem" id="eventositem">
                 
             
             
-            </p>
+            </div>
         </div>
         
     </div>

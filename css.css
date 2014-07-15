@@ -64,3 +64,8 @@ div.catItemHeader,div.catItemBody {
 span.catItemDateCreated {
     color: #13294a;
 }
+
+div.eventositem img {
+    
+    width: 100%;
+}
