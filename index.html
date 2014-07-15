@@ -76,7 +76,7 @@
                             evit("#eventositem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /></p>');
                         },
                         success:  function (response) {
-                            evit("#eventositem").html(response);
+                            evit("#ieventositem").html(response);
                         }
                     });
             }
@@ -109,6 +109,28 @@
                             success:  function (response) {
                                     no("#noticias").html(response);
                             }
+                    });
+            }
+
+            function noticiasitem(id){
+                var parametros = {
+                            "id" : id
+                    };
+                var evit = jQuery.noConflict();
+                    evit.ajax({
+
+                        data:  parametros,
+
+                        url:   'http://www.cip.org.pe/App/app/noticiasitem',
+
+                        type:  'post',
+
+                        beforeSend: function () {
+                            evit("#noticiasitem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /></p>');
+                        },
+                        success:  function (response) {
+                            evit("#noticiasitem").html(response);
+                        }
                     });
             }
 
@@ -240,6 +262,18 @@
                 <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> Eventos</h1>
             </header>
             <div class="eventositem" id="eventositem">
+                
+            
+            
+            </div>
+        </div>
+
+        <div class="panel" title="Profile" id="page6" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1><img src="img/logo.png" alt="Logo" style="width: 14px;" /> Noticias</h1>
+            </header>
+            <div class="noticiasitem" id="noticiasitem">
                 
             
             
