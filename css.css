@@ -37,7 +37,7 @@ p {
     color: #000;
 }
 
-p.recomendado img {
+p.recomendado img,p.eventos img {
     margin: 5px;
     
 }
