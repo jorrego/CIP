@@ -10,9 +10,15 @@ body {
     background-color: #13294a !important;
 }
 
+#afui #header h1 {
+    width: 100% !important;
+    left: 0 !important;
+}
+
 #afui #content {
     background-color: #fff;  
 }
+
 
 #afui .panel {
     background-color: #fff !important;
