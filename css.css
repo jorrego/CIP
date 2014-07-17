@@ -73,3 +73,7 @@ div.item img {
     
     width: 100%;
 }
+
+div.item p {
+    text-align: justify;
+}
