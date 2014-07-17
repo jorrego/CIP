@@ -15,6 +15,10 @@ body {
     left: 0 !important;
 }
 
+#afui h2 {
+    height: auto;
+}
+
 #afui #content {
     background-color: #fff;  
 }
