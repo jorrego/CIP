@@ -16,7 +16,7 @@ body {
 }
 
 #afui h2 {
-    height: auto;
+    height: auto !important;
 }
 
 #afui #content {
