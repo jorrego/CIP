@@ -47,7 +47,7 @@ p {
     color: #000;
 }
 
-p.recomendado img,p.eventos img {
+p.recomendado img,p.eventos img, div.catItemView {
     margin: 5px;
     
 }
@@ -61,10 +61,41 @@ div.catItemView.groupPrimary {
 /*float: left;*/
 }
 
-div.catItemHeader,div.catItemBody {
-    /*float: right*/
+div.catItemView {
+    width: 300px;
+    display: inline-block;
+    float: inherit;
 }
 
+div.catItemHeader {
+    text-align: left;
+    padding: 5px;
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+div.catItemTitle h3 {
+    color:  #fff;
+    text-decoration:none;
+}
+.catItemDateCreated {
+    color: #ddd;
+    font-weight: bold;
+}
+
+div.catItemImageBlock {
+    position: relative;
+    z-index: 0;
+}
 span.catItemDateCreated {
     color: #13294a;
 }
@@ -76,4 +107,17 @@ div.item img {
 
 div.item p {
     text-align: justify;
+}
+
+.clr {
+
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    float: none;
+
 }
