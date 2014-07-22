@@ -73,22 +73,25 @@ div.catItemHeader {
     width: 300px;
     position: absolute;
     z-index: 1;
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+
 
 }
 
 div.catItemTitle h3 {
+    text-shadow: 1px 1px #000;
     color:  #fff;
     text-decoration:none;
 }
-.catItemDateCreated {
-    color: #ddd;
+span.catItemDateCreated {
+    text-shadow: 1px 1px 1px #000;
+    font-size: 12px;
+    color: #E31E24;
     font-weight: bold;
 }
 
@@ -96,8 +99,18 @@ div.catItemImageBlock {
     position: relative;
     z-index: 0;
 }
-span.catItemDateCreated {
+
+#noticiasitem h2; #eventositem h2 {
+    color: #E31E24 !important;
+}
+
+#noticiasitem span.ItemDateCreated; #eventositem span.ItemDateCreated {
+    font-weight: bold;
     color: #13294a;
+
+}
+div.item {
+    padding: 1%;
 }
 
 div.item img {
