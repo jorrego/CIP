@@ -134,3 +134,10 @@ div.item p {
     float: none;
 
 }
+
+div.itemAttachments ul {
+    margin-left: 10px;
+}
+div.itemAttachments ul li{
+    padding: 5px 0 0 0;
+}
