@@ -47,7 +47,7 @@ p {
     color: #000;
 }
 
-p.recomendado img,p.eventos img, div.catItemView {
+div.recomendado img,div.eventos img, div.catItemView {
     margin: 5px;
     
 }
@@ -100,11 +100,11 @@ div.catItemImageBlock {
     z-index: 0;
 }
 
-#noticiasitem h2; #eventositem h2 {
+#noticiasitem h2, #eventositem h2 {
     color: #E31E24 !important;
 }
 
-#noticiasitem span.ItemDateCreated; #eventositem span.ItemDateCreated {
+#noticiasitem span.ItemDateCreated, #eventositem span.ItemDateCreated {
     font-weight: bold;
     color: #13294a;
 

@@ -137,14 +137,7 @@
             
         </script>
 
-    <script>
-$(document).ready(function(){
-$('.item a').each(function() {
-  var href = $(this).attr('href');
-  $(this).attr('onclick', "navigator.app.loadUrl('" + href + "', { openExternal:true });")
-         .removeAttr('href');
-});});
-</script>
+
 
 
 
@@ -191,7 +184,7 @@ $('.item a').each(function() {
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>CIP Eventos</h1>
             </header>
-            <p id="eventos" class="eventos" style="text-align: center">
+            <div id="eventos" class="eventos" style="text-align: center">
 
 
     
@@ -199,7 +192,7 @@ $('.item a').each(function() {
             
             
             
-            </p>
+            </div>
         </div>
         
         <div class="panel" title="Messages" id="page3" data-footer="none">
