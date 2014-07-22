@@ -109,7 +109,7 @@ div.catItemImageBlock {
     color: #13294a;
 
 }
-div.item {
+div.recomendado,div.eventos,div.item {
     padding: 1%;
 }
 
