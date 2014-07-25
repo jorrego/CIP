@@ -171,6 +171,30 @@
                     });
             }
 
+            function itemsolo(id,posicion){
+                var posicion='"#'+posicion+'"';
+                var parametros = {
+                            "id" : id,
+                            
+                    };
+                var revit = jQuery.noConflict();
+                    revit.ajax({
+
+                        data:  parametros,
+
+                        url:   'http://www.cip.org.pe/App/app/item',
+
+                        type:  'post',
+
+                        beforeSend: function () {
+                            revit(posicion).html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
+                        },
+                        success:  function (response) {
+                            revit(posicion).html(response);
+                        }
+                    });
+            }
+
             
         </script>
 
@@ -189,7 +213,7 @@
             <li><a href="#page2" class="icon home" onclick="eventos();return false;">CIP - Eventos</a></li>
             <li><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></li>
             <li><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></li>
-            <li><a href="#page8" class="icon paper" onclick="certHabilidad();return false;">Certificado de Habilidad</a></li>
+            <li><a href="#page8" class="icon paper" onclick="itemsolo(172,'habilidad');return false;">Certificado de Habilidad</a></li>
             <li><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></li>
             <li><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></li>
             <li><img src="img/fb.jpg" alt="Logo" style="width: 35px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
@@ -210,7 +234,7 @@
             <br />
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
             <p style="text-align: center;">
-                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="eventos();return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="certHabilidad();return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
+                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="eventos();return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="itemsolo(172,'habilidad');return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
                 <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" />
@@ -314,7 +338,7 @@
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>Certificado de Habilidad</h1>
             </header>
-            <div class="eventositem item" id="eventositem">
+            <div class="habilidad item" id="habilidad">
                 
             
             
