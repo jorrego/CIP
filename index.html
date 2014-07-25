@@ -153,20 +153,20 @@
                 var parametros = {
                             "id" : id
                     };
-                var evit = jQuery.noConflict();
-                    evit.ajax({
+                var revit = jQuery.noConflict();
+                    revit.ajax({
 
                         data:  parametros,
 
-                        url:   'http://www.cip.org.pe/App/app/noticiasitem',
+                        url:   'http://www.cip.org.pe/App/app/revistasitem',
 
                         type:  'post',
 
                         beforeSend: function () {
-                            evit("#noticiasitem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
+                            revit("#revistasitem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
                         },
                         success:  function (response) {
-                            evit("#noticiasitem").html(response);
+                            revit("#revistasitem").html(response);
                         }
                     });
             }
@@ -291,6 +291,18 @@
                 <h1>Revista Ingeniería Nacional</h1>
             </header>
             <div id="revistas" class="revistas" style="text-align: center">
+                
+            
+            
+            </div>
+        </div>
+
+        <div class="panel" title="Profile" id="page9" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Revista Ingeniería Nacional</h1>
+            </header>
+            <div class="revistasitem item" id="revistasitem">
                 
             
             
