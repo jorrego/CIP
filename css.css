@@ -150,3 +150,7 @@ div.itemAttachments ul {
 div.itemAttachments ul li{
     padding: 5px 0 0 0;
 }
+
+div.itemImageGallery img {
+    margin: 0 10px
+}
