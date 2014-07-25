@@ -134,6 +134,43 @@
                     });
             }
 
+            function revistas(){
+                var rev = jQuery.noConflict();
+                    rev.ajax({
+
+                            url:   'http://www.cip.org.pe/App/app/revistas',
+
+                            beforeSend: function () {
+                                    rev("#revistas").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
+                            },
+                            success:  function (response) {
+                                    rev("#revistas").html(response);
+                            }
+                    });
+            }
+
+            function revistasitem(id){
+                var parametros = {
+                            "id" : id
+                    };
+                var evit = jQuery.noConflict();
+                    evit.ajax({
+
+                        data:  parametros,
+
+                        url:   'http://www.cip.org.pe/App/app/noticiasitem',
+
+                        type:  'post',
+
+                        beforeSend: function () {
+                            evit("#noticiasitem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
+                        },
+                        success:  function (response) {
+                            evit("#noticiasitem").html(response);
+                        }
+                    });
+            }
+
             
         </script>
 
@@ -149,8 +186,11 @@
     <nav>
         <ul class="list">
             <!--<li><a href="#page1" class="icon heart">CIP Móvil</a></li>-->
-            <li><a href="#page2" class="icon home" onclick="eventos();return false;">CIP Eventos</a></li>
-            <li><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP Noticias</a></li>
+            <li><a href="#page2" class="icon home" onclick="eventos();return false;">CIP - Eventos</a></li>
+            <li><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></li>
+            <li><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></li>
+            <li><a href="#page8" class="icon paper" onclick="certHabilidad();return false;">Certificado de Habilidad</a></li>
+            <li><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></li>
             <li><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></li>
             <li><img src="img/fb.jpg" alt="Logo" style="width: 35px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 35px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
@@ -170,7 +210,7 @@
             <br />
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
             <p style="text-align: center;">
-                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="eventos();return false;">CIP Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP Noticias</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
+                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="eventos();return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="certHabilidad();return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
                 <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" />
@@ -182,7 +222,7 @@
         <div class="panel" title="Favorites" id="page2" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>CIP Eventos</h1>
+                <h1>CIP - Eventos</h1>
             </header>
             <div id="eventos" class="eventos" style="text-align: center">
 
@@ -198,7 +238,7 @@
         <div class="panel" title="Messages" id="page3" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>CIP Noticias</h1>
+                <h1>CIP - Noticias</h1>
             </header>
             <div id="noticias" class="noticias" style="text-align: center">
 
@@ -224,7 +264,7 @@
         <div class="panel" title="Profile" id="page5" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>CIP Noticias</h1>
+                <h1>CIP - Noticias</h1>
             </header>
             <div class="noticiasitem item" id="noticiasitem">
                 
@@ -236,7 +276,31 @@
         <div class="panel" title="Profile" id="page6" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
-                <h1>CIP Eventos</h1>
+                <h1>CIP - Eventos</h1>
+            </header>
+            <div class="eventositem item" id="eventositem">
+                
+            
+            
+            </div>
+        </div>
+
+        <div class="panel" title="Profile" id="page7" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Revista Ingeniería Nacional</h1>
+            </header>
+            <div id="revistas" class="revistas" style="text-align: center">
+                
+            
+            
+            </div>
+        </div>
+
+        <div class="panel" title="Profile" id="page8" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Certificado de Habilidad</h1>
             </header>
             <div class="eventositem item" id="eventositem">
                 

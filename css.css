@@ -62,7 +62,7 @@ div.catItemView.groupPrimary {
 }
 
 div.catItemView {
-    width: 300px;
+    width: 280px;
     display: inline-block;
     float: inherit;
 }
@@ -70,7 +70,7 @@ div.catItemView {
 div.catItemHeader {
     text-align: left;
     padding: 5px;
-    width: 300px;
+    width: 280px;
     position: absolute;
     z-index: 1;
     background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
@@ -99,6 +99,15 @@ div.catItemImageBlock {
     position: relative;
     z-index: 0;
 }
+
+div.catItemImageBlock img {
+    width: 280px;
+}
+
+#revistas div.catItemImageBlock img {
+    height: 411px;
+}
+
 
 #noticiasitem h2, #eventositem h2 {
     color: #E31E24 !important;
