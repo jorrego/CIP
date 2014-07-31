@@ -610,13 +610,8 @@ body {
 }
 
 #afui > #header{
-	background: #b22222;
-	background: -moz-linear-gradient(top, rgb(107,0,0) 0%, rgb(178,34,34) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(107,0,0)), color-stop(100%,rgb(178,34,34)));
-	background: -webkit-linear-gradient(top, rgb(107,0,0) 0%,rgb(178,34,34) 100%);
-	background: -o-linear-gradient(top, rgb(107,0,0) 0%,rgb(178,34,34) 100%);
-	background: -ms-linear-gradient(top, rgb(107,0,0) 0%,rgb(178,34,34) 100%);
-	background: linear-gradient(to bottom, rgb(107,0,0) 0%,rgb(178,34,34) 100%);
+	background: #E31E24;
+
 
     border:none;
 

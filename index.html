@@ -187,7 +187,7 @@
                         type:  'post',
 
                         beforeSend: function () {
-                            revit(posicion).html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
+                            revit(posicion).html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4 style="text-align: center">Cargando...</h4></p>');
                         },
                         success:  function (response) {
                             revit(posicion).html(response);
@@ -233,13 +233,13 @@
             </header>
             <br />
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
-            <p style="text-align: center;">
+            <div style="text-align: center;">
                 <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="eventos();return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="itemsolo(172,'#habilidad');return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
                 <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" />
 
-            </p>
+            </div>
 
         </div>
         
@@ -251,10 +251,6 @@
             <div id="eventos" class="eventos" style="text-align: center">
 
 
-    
-            
-            
-            
             
             </div>
         </div>
@@ -341,6 +337,27 @@
             <div class="habilidad item" id="habilidad">
                 
             
+            
+            </div>
+        </div>
+
+        <div class="panel" title="Profile" id="page10" data-footer="none">
+            <header>
+                <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
+                <h1>Servicios CIP</h1>
+            </header>
+            <div class="habilidad item" id="habilidad" style="text-align: center;">
+                
+                <button onclick="navigator.app.loadUrl('http://intranet.cip.org.pe', { openExternal:true });">Intranet</button>
+                <br />
+                <button onclick="navigator.app.loadUrl('http://intranet.cip.org.pe/index.php?xy=3', { openExternal:true });">Bolsa de Trabajo</button>
+                <br />
+                <button onclick="navigator.app.loadUrl('http://www.cip.org.pe/index.php/correo-electronico.html', { openExternal:true });">Email</button>
+                <br />
+                <button onclick="navigator.app.loadUrl('http://www.cip.org.pe/index.php/instituto-de-servicios-sociales.html', { openExternal:true });">ISS</button>
+                <br />
+                <button onclick="navigator.app.loadUrl('http://www.cip.org.pe/index.php/seguro-de-asistencia-medica-familiar.html', { openExternal:true });">Asistencia Médica</button>
+                
             
             </div>
         </div>

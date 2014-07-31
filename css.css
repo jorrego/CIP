@@ -2,9 +2,6 @@ body {
 }
 
 
-#header.hasMenu {
-    background: #b22222 !important;
-}
 
 #menu.tabletMenu {
     background-color: #13294a !important;
@@ -28,17 +25,18 @@ body {
     background-color: #fff !important;
 }
 
-#page1 button {
+#page1 button, #page10 button {
     margin-top: 10px;
     border: 0;
     border-radius: 5px;
     width: 200px;
     padding: 10px 5px;
     background-color: #f00;
+    color: #fff;
     
 }
 
-#page1 button a {
+#page1 button a, #page10 button a {
     text-decoration: none;
     color: #fff;
 }
