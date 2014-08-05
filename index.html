@@ -47,7 +47,7 @@
             var cont = jQuery.noConflict();
 
             cont.ajax({
-                url: 'http://www.cip.org.pe/App/app/' + pagina,
+                url: 'http://www.cip.org.pe/App/app/'+pagina,
 
                 beforeSend: function () {
                     cont(posicion).html('<br /><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4>');
@@ -229,7 +229,7 @@
     <nav>
         <ul class="list">
             <!--<li><a href="#page1" class="icon heart">CIP Móvil</a></li>-->
-            <li><a href="#page2" class="icon home" onclick="contenido(eventos,'#eventos');return false;">CIP - Eventos</a></li>
+            <li><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos');return false;">CIP - Eventos</a></li>
             <li><a href="#page3" class="icon chat" onclick="noticias();return false;">CIP - Noticias</a></li>
             <li><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></li>
             <li><a href="#page8" class="icon paper" onclick="itemsolo(172,'#habilidad');return false;">Certificado de Habilidad</a></li>
