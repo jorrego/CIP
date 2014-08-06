@@ -21,7 +21,8 @@
     <icon src="img/logo_s.png" />
     <preference name="android:targetSdkVersion" value="14" />
     <preference name="android:minSdkVersion" value="14" />
-    <plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
-    <preference name="phonegap-version" value="3.4.0" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <preference name="phonegap-version" value="3.5.0" />
     
 </widget>

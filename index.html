@@ -74,104 +74,6 @@
         <script>
             
 
-            function eventositem(id){
-                var parametros = {
-                            "id" : id
-                    };
-                var evit = jQuery.noConflict();
-                    evit.ajax({
-
-                        data:  parametros,
-
-                        url:   'http://www.cip.org.pe/App/app/eventositem',
-
-                        type:  'post',
-
-                        beforeSend: function () {
-                            evit("#eventositem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
-                        },
-                        success:  function (response) {
-                            evit("#eventositem").html(response);
-                        }
-                    });
-            }
-
-            
-            function recomendados(){
-                var re = jQuery.noConflict();
-                    re.ajax({
-
-                            url:   'http://www.cip.org.pe/App/app/recomendados',
-
-                            beforeSend: function () {
-                                    re("#recomendado").html('<br /><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4>');
-                            },
-                            success:  function (response) {
-                                    re("#recomendado").html(response);
-                            }
-                    });
-            }
-
-            
-
-            function noticiasitem(id){
-                var parametros = {
-                            "id" : id
-                    };
-                var evit = jQuery.noConflict();
-                    evit.ajax({
-
-                        data:  parametros,
-
-                        url:   'http://www.cip.org.pe/App/app/noticiasitem',
-
-                        type:  'post',
-
-                        beforeSend: function () {
-                            evit("#noticiasitem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
-                        },
-                        success:  function (response) {
-                            evit("#noticiasitem").html(response);
-                        }
-                    });
-            }
-
-            function revistas(){
-                var rev = jQuery.noConflict();
-                    rev.ajax({
-
-                            url:   'http://www.cip.org.pe/App/app/revistas',
-
-                            beforeSend: function () {
-                                    rev("#revistas").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
-                            },
-                            success:  function (response) {
-                                    rev("#revistas").html(response);
-                            }
-                    });
-            }
-
-            function revistasitem(id){
-                var parametros = {
-                            "id" : id
-                    };
-                var revit = jQuery.noConflict();
-                    revit.ajax({
-
-                        data:  parametros,
-
-                        url:   'http://www.cip.org.pe/App/app/revistasitem',
-
-                        type:  'post',
-
-                        beforeSend: function () {
-                            revit("#revistasitem").html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4></p>');
-                        },
-                        success:  function (response) {
-                            revit("#revistasitem").html(response);
-                        }
-                    });
-            }
 
             function itemsolo(id,posicion){
                 
@@ -202,8 +104,6 @@
 
 
 
-
-
 </head>
 <body> 
 <div id="afui">
@@ -214,10 +114,10 @@
             <!--<li><a href="#page1" class="icon heart">CIP Móvil</a></li>-->
             <li><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos',0);return false;">CIP - Eventos</a></li>
             <li><a href="#page3" class="icon chat" onclick="contenido('noticias','#noticias',0);return false;">CIP - Noticias</a></li>
-            <li><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></li>
+            <li><a href="#page7" class="icon folder" onclick="contenido('revistas','#revistas',0);return false;">Revista Ingeniería Nacional</a></li>
             <li><a href="#page8" class="icon paper" onclick="itemsolo(172,'#habilidad');return false;">Certificado de Habilidad</a></li>
             <li><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></li>
-            <li><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></li>
+            <li><a href="#page4" class="icon user" onclick="contenido('recomendados','#recomendados',0);return false;">Eventos Recomendados</a></li>
             <li><img src="img/fb.jpg" alt="Logo" style="width: 35px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 35px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 35px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" /></li>
@@ -236,7 +136,7 @@
             <br />
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
             <div style="text-align: center;">
-                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos',0);return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="contenido('noticias','#noticias',0);return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="revistas();return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="itemsolo(172,'#habilidad');return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="recomendados();return false;">Eventos Recomendados</a></button><br /><br />
+                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos',0);return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="contenido('noticias','#noticias',0);return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="contenido('revistas','#revistas',0);return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="itemsolo(172,'#habilidad');return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" onclick="servicios();return false;">Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="contenido('recomendados','#recomendados',0);return false;">Eventos Recomendados</a></button><br /><br />
                 <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" />
@@ -276,7 +176,7 @@
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>Eventos Recomendados</h1>
             </header>
-            <p class="recomendado" id="recomendado" style="text-align: center">
+            <p class="recomendados" id="recomendados" style="text-align: center">
                 
             
             
@@ -338,8 +238,7 @@
             </header>
             <div class="habilidad item" id="habilidad">
                 
-            
-            
+
             </div>
         </div>
 
@@ -360,7 +259,6 @@
                 <br />
                 <button onclick="navigator.app.loadUrl('http://www.cip.org.pe/index.php/seguro-de-asistencia-medica-familiar.html', { openExternal:true });">Asistencia Médica</button>
                 
-            
             </div>
         </div>
         
