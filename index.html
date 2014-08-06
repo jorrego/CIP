@@ -49,59 +49,21 @@
             };
 
             var cont = jQuery.noConflict();
-
             cont.ajax({
 
                 data:  parametros,
-
                 url: 'http://www.cip.org.pe/App/app/'+pagina,
-
                 type:  'post',
-
                 beforeSend: function () {
-                    cont(posicion).html('<br /><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4>Cargando...</h4>');
+                    cont(posicion).html('<p><br /><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><span style="font-size:30px">Cargando...</span></p>');
                 },
-
                 success:  function (response) {
                     cont(posicion).html(response);
                 }
-
             });
         }
 
     </script>
-
-        <script>
-            
-
-
-            function itemsolo(id,posicion){
-                
-                var parametros = {
-                            "id" : id,
-                            
-                    };
-                var revit = jQuery.noConflict();
-                    revit.ajax({
-
-                        data:  parametros,
-
-                        url:   'http://www.cip.org.pe/App/app/item',
-
-                        type:  'post',
-
-                        beforeSend: function () {
-                            revit(posicion).html('<br /><p style="text-align: center"><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><h4 style="text-align: center">Cargando...</h4></p>');
-                        },
-                        success:  function (response) {
-                            revit(posicion).html(response);
-                        }
-                    });
-            }
-
-            
-        </script>
-
 
 
 </head>
@@ -136,14 +98,15 @@
             <br />
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
             <div style="text-align: center;">
+
                 <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos',0);return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="contenido('noticias','#noticias',0);return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="contenido('revistas','#revistas',0);return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="contenido('item','#habilidad',172);return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" >Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="contenido('recomendados','#recomendados',0);return false;">Eventos Recomendados</a></button><br /><br />
                 <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" />
 
             </div>
-
         </div>
+
         
         <div class="panel" title="Favorites" id="page2" data-footer="none">
             <header>
@@ -151,11 +114,9 @@
                 <h1>CIP - Eventos</h1>
             </header>
             <div id="eventos" class="eventos" style="text-align: center">
-
-
-            
             </div>
         </div>
+
         
         <div class="panel" title="Messages" id="page3" data-footer="none">
             <header>
@@ -163,25 +124,19 @@
                 <h1>CIP - Noticias</h1>
             </header>
             <div id="noticias" class="noticias" style="text-align: center">
-
-
-            
-            
-            
             </div>
         </div>
+
         
         <div class="panel" title="Profile" id="page4" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>Eventos Recomendados</h1>
             </header>
-            <p class="recomendados" id="recomendados" style="text-align: center">
-                
-            
-            
-            </p>
+            <div class="recomendados" id="recomendados" style="text-align: center">
+            </div>
         </div>
+
 
         <div class="panel" title="Profile" id="page5" data-footer="none">
             <header>
@@ -189,11 +144,9 @@
                 <h1>CIP - Noticias</h1>
             </header>
             <div class="noticiasitem item" id="noticiasitem">
-                
-            
-            
             </div>
         </div>
+
 
         <div class="panel" title="Profile" id="page6" data-footer="none">
             <header>
@@ -201,11 +154,9 @@
                 <h1>CIP - Eventos</h1>
             </header>
             <div class="eventositem item" id="eventositem">
-                
-            
-            
             </div>
         </div>
+
 
         <div class="panel" title="Profile" id="page7" data-footer="none">
             <header>
@@ -213,11 +164,9 @@
                 <h1>Revista Ingeniería Nacional</h1>
             </header>
             <div id="revistas" class="revistas" style="text-align: center">
-                
-            
-            
             </div>
         </div>
+
 
         <div class="panel" title="Profile" id="page9" data-footer="none">
             <header>
@@ -225,11 +174,9 @@
                 <h1>Revista Ingeniería Nacional</h1>
             </header>
             <div class="revistasitem item" id="revistasitem">
-                
-            
-            
             </div>
         </div>
+
 
         <div class="panel" title="Habilidad" id="page8" data-footer="none">
             <header>
@@ -237,10 +184,9 @@
                 <h1>Certificado de Habilidad</h1>
             </header>
             <div class="item" id="habilidad">
-                
-
             </div>
         </div>
+
 
         <div class="panel" title="Servicios" id="page10" data-footer="none">
             <header>
@@ -263,6 +209,7 @@
         </div>
         
     </div>
+
 </div>
 </body>
-</html>    
+</html>
