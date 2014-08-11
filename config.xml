@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.cip.movil"
         versionCode="1" 
-        version   = "1.0.0">
+        version   = "1.1.0">
 
     <!-- versionCode is optional and Android only -->
 
@@ -11,11 +11,11 @@
     <name>CIP Móvil</name>
 
     <description>
-        Aplicación movil del Colegio de Ingenieros del Perú - Consejo Nacional.
+        Aplicación móvil del Colegio de Ingenieros del Perú - Consejo Nacional.
     </description>
 
     <author href="http://www.cip.org.pe" email="webmaster@cip.org.pe">
-        Área de Informática.
+        CIP - CN / Área de Informática.
     </author>
     
     <icon src="img/logo_s.png" />

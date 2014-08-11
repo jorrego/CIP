@@ -34,7 +34,7 @@ body {
 
 #afui input,textarea { -webkit-user-select:text; -moz-user-select:-moz-text;-moz-user-select:text;} /* allow users to select text that appears in input fields */
 
-#afui img { border:none; } /* Remove default borders for images */
+#afui img { border:none; margin: 5px; } /* Remove default borders for images */
 
 
 #afui p {

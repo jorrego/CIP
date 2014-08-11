@@ -51,7 +51,8 @@ div.recomendado img,div.eventos img, div.catItemView {
 }
 
 a {
-color: #bc0202;
+    text-decoration: none;
+    color: #bc0202;
 }
 
 div.catItemView.groupPrimary {
@@ -95,6 +96,7 @@ span.catItemDateCreated {
 
 div.catItemImageBlock {
     position: relative;
+    display: inline-block;
     z-index: 0;
 }
 
