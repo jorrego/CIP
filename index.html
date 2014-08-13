@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>CIP Movil</title>
-<!--
-    This template can be used for simple app with left side menu that can be opened to switch views, for applications like Youtube App or Gmail app.
--->  
+    <title>CIP Móvil</title>
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
     
@@ -17,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
     <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.1.min.js"></script>
-    <!--AppFramework plugin for sliding side menu-->
+
     <script type="text/javascript" charset="utf-8" src="appframework/plugins/af.slidemenu.js"></script>
 
 <!-- Required if packaging to native app using Intel XDK -->    
@@ -55,7 +53,7 @@
                 url: 'http://www.cip.org.pe/App/app/'+pagina,
                 type:  'post',
                 beforeSend: function () {
-                    cont(posicion).html('<p style="text-align:center"><br /><img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><span style="font-size:30px">Cargando...</span></p>');
+                    cont(posicion).html('<p style="text-align:center"><br /><img src="img/logo.png" alt="Logo" style="width: 45%; max-width: 300px;" /><br /><span style="font-size:30px">Cargando...</span></p>');
                 },
                 success:  function (response) {
                     cont(posicion).html(response);
@@ -99,7 +97,7 @@
             <h2 style="text-align: center;color: #f00">BIENVENIDO</h2>
             <div style="text-align: center;">
 
-                <img src="img/logo.png" alt="Logo" style="width: 50%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos',0);return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="contenido('noticias','#noticias',0);return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="contenido('revistas','#revistas',0);return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="contenido('item','#habilidad',172);return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" >Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="contenido('recomendados','#recomendados',0);return false;">Eventos Recomendados</a></button><br /><br />
+                <img src="img/logo.png" alt="Logo" style="width: 45%; max-width: 300px;" /><br /><button type="button"><a href="#page2" class="icon home" onclick="contenido('eventos','#eventos',0);return false;">CIP - Eventos</a></button><br /><button type="button"><a href="#page3" class="icon chat" onclick="contenido('noticias','#noticias',0);return false;">CIP - Noticias</a></button><br /><button type="button"><a href="#page7" class="icon folder" onclick="contenido('revistas','#revistas',0);return false;">Revista Ingeniería Nacional</a></button><br /><button type="button"><a href="#page8" class="icon paper" onclick="contenido('item','#habilidad',172);return false;">Certificado de Habilidad</a></button><br /><button type="button"><a href="#page10" class="icon tag" >Servicios CIP</a></button><br /><button type="button"><a href="#page4" class="icon user" onclick="contenido('recomendados','#recomendados',0);return false;">Eventos Recomendados</a></button><br /><br />
                 <img src="img/fb.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.facebook.com/cipcn', { openExternal:true });" />
                 <img src="img/yt.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://www.youtube.com/user/CIPCN', { openExternal:true });" />
                 <img src="img/tw.jpg" alt="Logo" style="width: 50px;" onclick="navigator.app.loadUrl('https://twitter.com/CIP_CN', { openExternal:true });" />
@@ -108,7 +106,7 @@
         </div>
 
         
-        <div class="panel" title="Favorites" id="page2" data-footer="none">
+        <div class="panel" title="Eventos" id="page2" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>CIP - Eventos</h1>
@@ -118,7 +116,7 @@
         </div>
 
         
-        <div class="panel" title="Messages" id="page3" data-footer="none">
+        <div class="panel" title="Noticias" id="page3" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>CIP - Noticias</h1>
@@ -128,7 +126,7 @@
         </div>
 
         
-        <div class="panel" title="Profile" id="page4" data-footer="none">
+        <div class="panel" title="Recomendados" id="page4" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>Eventos Recomendados</h1>
@@ -138,7 +136,7 @@
         </div>
 
 
-        <div class="panel" title="Profile" id="page5" data-footer="none">
+        <div class="panel" title="Noticia" id="page5" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>CIP - Noticias</h1>
@@ -148,7 +146,7 @@
         </div>
 
 
-        <div class="panel" title="Profile" id="page6" data-footer="none">
+        <div class="panel" title="Evento" id="page6" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>CIP - Eventos</h1>
@@ -158,7 +156,7 @@
         </div>
 
 
-        <div class="panel" title="Profile" id="page7" data-footer="none">
+        <div class="panel" title="Revistas" id="page7" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>Revista Ingeniería Nacional</h1>
@@ -168,7 +166,7 @@
         </div>
 
 
-        <div class="panel" title="Profile" id="page9" data-footer="none">
+        <div class="panel" title="Revista" id="page9" data-footer="none">
             <header>
                 <a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
                 <h1>Revista Ingeniería Nacional</h1>
